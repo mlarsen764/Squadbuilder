@@ -10,3 +10,9 @@
 .reaction-panel{border-color:#b07bd6;background:#241d2d}.reaction-panel[hidden]{display:none}.reaction-choice{cursor:pointer}.incoming{color:#e5c6ff;font-weight:700}
 @media(max-width:850px){.hand{grid-template-columns:repeat(2,minmax(0,1fr))}.card-grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}}
 @media(max-width:520px){#app{padding:7px}.top-actions{width:100%}.top-actions button{flex:1}.card-grid,.hand{grid-template-columns:1fr}.unit,.game-card{min-height:auto}}
+
+/* v0.6: fixed-size battlefield pieces */
+.formation-row .card-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:7px}
+.formation-row .unit{flex:0 0 205px;width:205px;max-width:205px}
+.unit.selected-target{border-color:var(--good)!important;box-shadow:0 0 0 2px rgba(103,191,132,.28)}
+@media(max-width:520px){.formation-row .unit{flex:1 1 165px;width:auto;max-width:205px}}

@@ -1,8 +1,8 @@
-# Squadbuilder Adventure - Browser Prototype v0.5
+# Squadbuilder Adventure - Browser Prototype v0.6
 
 Open `index.html` in a modern browser. No server or installation is required.
 
-## v0.5 focus
+## v0.6 focus
 - Manual Reaction windows during the enemy phase.
 - Enemy attacks are declared before damage resolves.
 - If a valid Reaction is in hand, combat pauses and the player may play one eligible Reaction or Pass.
@@ -21,8 +21,13 @@ Open `index.html` in a modern browser. No server or installation is required.
 - Hero identity colors match their cards.
 
 
-## v0.5 layout changes
+## v0.6 layout changes
 - Enemy Backline is displayed above Enemy Frontline, so opposing Frontlines face each other.
 - Battlefield, hand, and combat log are vertically compacted to reduce scrolling on desktop/laptop displays.
 - Hero identity colors are much more prominent on both hero panels and their cards.
 - Reaction behavior from v0.4 is unchanged.
+
+## v0.6 changes
+- Goblin Archer now prioritizes living Backline heroes and only falls back to Frontline if no Backline hero remains.
+- Multi-target attacks use manual, distinct target selection before resolving.
+- Battlefield hero/enemy boxes use fixed desktop widths instead of stretching across the formation row.
