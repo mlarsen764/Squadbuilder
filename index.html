@@ -16,11 +16,14 @@
 
   <section class="panel">
     <div class="section-head"><h2>Enemy Lane</h2><span>Choose an action first, then select a highlighted target.</span></div>
-    <div id="enemyLane" class="card-grid enemies"></div>
+    <div class="formation enemy-formation">
+      <div class="formation-row"><h3>Frontline</h3><div id="enemyFrontline" class="card-grid enemies"></div></div>
+      <div class="formation-row"><h3>Backline</h3><div id="enemyBackline" class="card-grid enemies"></div></div>
+    </div>
   </section>
 
   <section class="panel">
-    <div class="section-head"><h2>Your Squad</h2><span>Frontline protects the Backline from melee enemies.</span></div>
+    <div class="section-head"><h2>Your Squad</h2><span>Frontline protects the Backline from Melee attacks; if the Frontline falls, the Backline is exposed.</span></div>
     <div class="formation">
       <div class="formation-row"><h3>Frontline</h3><div id="frontline" class="card-grid heroes"></div></div>
       <div class="formation-row"><h3>Backline</h3><div id="backline" class="card-grid heroes"></div></div>
@@ -30,6 +33,12 @@
   <section class="panel">
     <div class="section-head"><h2>Hand <small id="handCount">0/4</small></h2><span><b id="deckCount">0</b> deck / <b id="discardCount">0</b> discard · Limit 4</span></div>
     <div id="hand" class="hand"></div>
+  </section>
+
+  <section id="reactionPanel" class="panel reaction-panel" hidden>
+    <div class="section-head"><h2>Reaction Window</h2><span id="reactionEvent"></span></div>
+    <div id="reactionChoices" class="hand"></div>
+    <button id="passReactionBtn" class="secondary">Pass</button>
   </section>
 
   <section class="panel compact">

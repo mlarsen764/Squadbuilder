@@ -1,18 +1,21 @@
-# Squadbuilder Adventure — Browser Prototype v0.2
+# Squadbuilder Adventure - Browser Prototype v0.4
 
 Open `index.html` in a modern browser. No server or installation is required.
 
-## v0.2 changes
-- Hero cards now display their Basic Action description and Passive.
-- Targeting is action-first: choose a Basic Action/card, then choose a highlighted enemy or ally.
-- Cleric Heal, Quick Heal, and Mend can target allies manually.
-- Inspiring Word lets you choose which exhausted ally to ready.
-- Hand limit is 4. Draw effects stop when the hand is full.
-- Frontline is displayed visually above Backline.
-- Added a target prompt and Cancel button.
+## v0.4 focus
+- Manual Reaction windows during the enemy phase.
+- Enemy attacks are declared before damage resolves.
+- If a valid Reaction is in hand, combat pauses and the player may play one eligible Reaction or Pass.
+- Passing keeps the Reaction card in hand.
+- A played Reaction is discarded only after use.
+- One Reaction maximum per triggering event for this prototype.
+- Counter Strike currently demonstrates the system: it is only eligible when Warrior is the declared target.
 
-## Current vertical slice
-Heroes: Warrior, Cleric, Archer.
-Enemies: Goblin Spearman, Orc Warrior, Goblin Archer.
-
-The prototype still uses one player lane. Multi-lane combat and manual Reaction prompts are planned for later builds.
+## Existing rules retained
+- Hero and enemy Frontline / Backline formations.
+- Melee must target Frontline while one exists; Backline is exposed when Frontline is empty.
+- Ranged can target either row.
+- Choose action/card first, then target.
+- Hand limit 4; draw up to 4 at the start of each player phase.
+- Normal Block expires between rounds.
+- Hero identity colors match their cards.
