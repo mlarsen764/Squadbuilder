@@ -1,14 +1,14 @@
 window.GAME_DATA={
  heroes:[
-  {id:'warrior',name:'Warrior',hp:7,position:'front',basic:{name:'Strike',type:'damage',amount:2,range:'melee'},passive:'Gain Rage on kills.'},
-  {id:'cleric',name:'Cleric',hp:6,position:'front',basic:{name:'Mend',type:'heal',amount:1,range:'ally'},passive:'Healing another unit also heals Cleric 1.'},
-  {id:'archer',name:'Archer',hp:5,position:'back',basic:{name:'Shoot',type:'damage',amount:1,range:'ranged'},passive:'50% crit chance (+1 damage).'}
+  {id:'warrior',name:'Warrior',hp:7,position:'front',basic:{name:'Strike',type:'damage',amount:2,range:'melee',description:'Deal 2 Melee damage. If your lane has no enemies, this Basic Action may target another lane.'},passive:'Gain Rage on kills.'},
+  {id:'cleric',name:'Cleric',hp:6,position:'front',basic:{name:'Mend',type:'heal',amount:1,range:'ally',description:'Heal any allied unit for 1.'},passive:'Healing another unit also heals Cleric 1.'},
+  {id:'archer',name:'Archer',hp:5,position:'back',basic:{name:'Shoot',type:'damage',amount:1,range:'ranged',description:'Deal 1 Ranged damage to any enemy.'},passive:'50% crit chance (+1 damage).'}
  ],
  cards:[
   {id:'ARC-01',hero:'archer',name:'Multi Shot',timing:'Action',text:'Deal 2 damage to 2 enemies. Crit: deal 2 damage to 3 instead.',effect:'multi',amount:2},
   {id:'ARC-02',hero:'archer',name:'Take Aim',timing:'Quick',text:'Quick: Archer next attack is guaranteed to crit. Draw 1.',effect:'aim'},
-  {id:'ARC-03',hero:'archer',name:'Focused Shot',timing:'Action',text:'Deal 2 damage. Crit: +2 damage.',effect:'focused',amount:2},
-  {id:'ARC-04',hero:'archer',name:'Piercing Arrow',timing:'Action',text:'Deal 1 ignoring Block. Crit: apply Bleed.',effect:'pierce',amount:1},
+  {id:'ARC-03',hero:'archer',name:'Focused Shot',timing:'Action',text:'Deal 2 damage. Crit: +2 damage.',effect:'focused',amount:2,range:'ranged'},
+  {id:'ARC-04',hero:'archer',name:'Piercing Arrow',timing:'Action',text:'Deal 1 ignoring Block. Crit: apply Bleed.',effect:'pierce',amount:1,range:'ranged'},
   {id:'WAR-01',hero:'warrior',name:'Charge',timing:'Action',text:'Deal 2 melee damage. May attack across lanes.',effect:'damage',amount:2,range:'ranged'},
   {id:'WAR-02',hero:'warrior',name:'Counter Strike',timing:'Reaction',text:'React: when attacked, reduce damage by 1 and deal 2 back.',effect:'reactionCounter'},
   {id:'WAR-03',hero:'warrior',name:'Devastating Blow',timing:'Action',text:'Deal 3 melee damage. Killing blow gains extra Rage.',effect:'damage',amount:3,range:'melee'},
