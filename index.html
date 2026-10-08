@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Squadbuilder Adventure - Combat Prototype</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="app">
+  <header class="topbar">
+    <div><h1>Squadbuilder Adventure</h1><p id="phaseLabel">Round 1 - Player Phase</p></div>
+    <div class="top-actions"><button id="endPhaseBtn">End Player Phase</button><button id="restartBtn" class="secondary">Restart</button></div>
+  </header>
+
+  <section class="panel">
+    <div class="section-head"><h2>Enemy Lane</h2><span>Select an enemy, then attack it.</span></div>
+    <div id="enemyLane" class="card-grid enemies"></div>
+  </section>
+
+  <section class="panel">
+    <div class="section-head"><h2>Your Squad</h2><span>Frontline is targeted before Backline by melee enemies.</span></div>
+    <div class="formation">
+      <div><h3>Frontline</h3><div id="frontline" class="card-grid heroes"></div></div>
+      <div><h3>Backline</h3><div id="backline" class="card-grid heroes"></div></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="section-head"><h2>Hand</h2><span><b id="deckCount">0</b> deck / <b id="discardCount">0</b> discard</span></div>
+    <div id="hand" class="hand"></div>
+  </section>
+
+  <section class="panel compact">
+    <h2>Combat Log</h2><div id="log" class="log" aria-live="polite"></div>
+  </section>
+</main>
+<script src="data/gameData.js"></script>
+<script src="src/game.js"></script>
+</body>
+</html>
